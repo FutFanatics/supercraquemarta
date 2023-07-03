@@ -4,64 +4,14 @@
 	var containerwin = $(".win__slick")
 	var containerdetails = $(".slick__details")
 	var containerCuriosityText = $(".slick-curiosity_text")
-	var containerCuriosityImg = $(".slick-curiosity_img")
-	var containerCuriositymob = $(".slick__mob_curiosity")
 	
 	
 	containerCuriosityText.slick({
 		autoplay: false,
 		autoplaySpeed: 4000,
-		asNavFor: '.slick-curiosity_img',
 		pauseOnFocus: false,
 		pauseOnHover: false,
-		arrows: true,
-		dots: false,
-		prevArrow: $('.curiosity-nav').find('.slick-prev'),
-        nextArrow: $('.curiosity-nav').find('.slick-next'),
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-
-						}
-			
-			}]
-	});
-
-	containerCuriosityImg.slick({
-		autoplay: false,
-		asNavFor: '.slick-curiosity_text',
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: true,
-		dots: false,
-		prevArrow: $('.curiosity-nav').find('.slick-prev'),
-        nextArrow: $('.curiosity-nav').find('.slick-next'),
-		adaptiveHeight: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-
-						}
-			
-			}]
-	});
-
-	containerCuriositymob.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows:false,
+		arrows: false,
 		dots: true,
 		adaptiveHeight: true,
 		slidesToShow: 1,
@@ -76,6 +26,7 @@
 			
 			}]
 	});
+
 
 	containerwin.slick({
 		autoplay: false,
@@ -140,10 +91,11 @@
 			'</a>' +
 		'</div>';
 
-    var vitrine = $('#vitrine-fut');
+		var vitrine = $('#vitrine-fut');
+		var itens = $('#vitrine-fut').attr('data-products');
 
 	
-	$.getJSON('https://www.futfanatics.com.br/web_api/products?id=' + produtos.join(","), '', function (data) {
+	$.getJSON('https://www.futfanatics.com.br/web_api/products?id=' + itens, '', function (data) {
 		if (data) {
 			var variants = [];
 
@@ -169,7 +121,7 @@
 					template.find('.title').html(title);
 
 					if (percentDiscount < 100) {
-						template.find('.foto .discount').html('▾ ' + percentDiscount.toFixed() + '%').removeClass('d-none');
+						template.find('.foto .discount').html('<i class="icon-arrow-down-fill"></i>' + percentDiscount.toFixed() + '%').removeClass('d-none');
 					}
 
 					// lozad('.lozad', {
@@ -261,8 +213,8 @@
 			slidesToShow: 2,
 			slidesToScroll: 2,
 	//        lazyLoad: 'ondemand',
-			prevArrow: '<button class="slick-prev slick-arrow" type="button"><i class="sprite icon-arrow-left"></i></button>',
-			nextArrow: '<button class="slick-next slick-arrow" type="button"><i class="sprite icon-arrow-right"></i></button>',
+			prevArrow: $('.slick-prev slick-arrow').find('.sprite icon-arrow-left'),
+			nextArrow: $('.slick-next slick-arrow').find('.sprite icon-arrow-right'),
 		});
 
 	} else {
@@ -276,8 +228,8 @@
 			slidesToShow: 5,
 			slidesToScroll: 5,
 	//        lazyLoad: 'ondemand',
-			prevArrow: '<button class="slick-prev slick-arrow" type="button"><i class="sprite icon-arrow-left"></i></button>',
-			nextArrow: '<button class="slick-next slick-arrow" type="button"><i class="sprite icon-arrow-right"></i></button>',
+			prevArrow: $('.slick-nav_vitrine').find('.slick-prev'),
+			nextArrow: $('.slick-nav_vitrine').find('.slick-next'),
 		});
 
 	}
@@ -417,31 +369,6 @@
 
 
 
-	containerhistory.slick({
-		autoplay: false,
-		autoplaySpeed: 4000,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		arrows: true,
-		dots: false,
-		adaptiveHeight: true,
-		prevArrow: $('.slick-nav_historia').find('.slick-prev'),
-        nextArrow: $('.slick-nav_historia').find('.slick-next'),
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-
-						}
-			
-			}]
-	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
-		var current = currentSlide + 1;
-		$('.slick-nav_historia').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
-);
 	
     function multiSlideAdaptiveHeight(slider) {
 
