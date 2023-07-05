@@ -5,8 +5,8 @@
 
 .c-curiosity{
     padding: 40px 0px;
-    background-color: #000;
-
+    max-height: 90vh;
+    overflow: hidden;
     @include md{
         padding: 80px 0px;
     }
@@ -18,55 +18,85 @@
             }
             padding: 10px 50px;
         }
-        &-toptitle{
-            letter-spacing: 5px;
-            font-size: 18px;
-            text-transform: uppercase;
-            color: #FFA82D;
-            font-weight: 600;
-            text-align: center;
-            padding-bottom: 8px;
-            
-            @include md{
-                padding-bottom: 0;
-                text-align: start;
-                font-size: 22px;
-                letter-spacing: 5px;
-            }
-        }
-        &-title{
-            color: #FFF;
-            font-size: 50px;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-family: 'bebas neue';
-            text-align: center;
-            padding-bottom: 16px;
 
-            @include md{
-                text-align: start;
-                font-size: 85px;
-                padding-bottom: 0px;
+        &-icon{
+            height: 700px;
+            width: 700px;
+
+            &_bottom{
+                bottom: -70%;
+                left: -20%;
             }
-            br{
-                display:  none;
-                @include md{
-                    display: block;
-                }
+            &_top{
+                top: -80%;
+                right: -20%;
             }
         }
+
+        &-target{
+            position: relative;
+            width: 53px;
+            background-color: #742AF9;
+            height: 500px;
+
+        }
+
+        &-title{
+            color: #fff;
+            text-transform: uppercase;
+            transform: translateX(90deg);
+            position: absolute;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 10px;
+            
+        }
+        
+    }
+    .box-text{
+        transform: rotate(270deg) translateX(-50%);
+        left: -12px;
+        position: relative;
+        bottom: -60%;
     }
     .slick-curiosity_text{
-        .card{
-            &-curiosity-text{
-                background-color: #FFA82D;
-                padding:40px;
+        .card-curiosity-text{
+            height: 500px;
+        }
+        min-height: 500px;
+        
 
-                @include md{
-                    height: 365px;
-                    display: flex;
-                    justify-content: center;
-                }
+        .item{
+            &_1{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-img-curiosity-1.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &_2{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-img-curiosity-2.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &_3{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-img-curiosity-3.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &_4{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-img-curiosity-4.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &_5{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-img-curiosity-5.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
         .curiosity{
@@ -81,6 +111,7 @@
                     text-align: start;
                 }
             }
+
             &-card-content{
                 padding-top: 8px;
                 color: #000;
@@ -93,14 +124,115 @@
         }
     }
     .slick-curiosity_img{
-        .img-box{
-            width: 100%;
-            max-height: 700px;
+        position: relative;
+        left: -15%;
+        .item{        
+            background-repeat: no-repeat !important;
+            background-size: contain !important;
+            height: 450px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 450px !important;
 
-            @include md{
-                border-radius: 10px 10px 10px 0px;
+            
+            &_1{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-slick-curiosity.svg');
+                
+            }
+            &_2{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-slick-curiosity-green.svg');
+                
+            }
+            &_3{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-slick-curiosity-yellow.svg');
+                
+            }
+            &_4{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-slick-curiosity-dark_green.svg');
+                
+            }
+            &_5{
+                background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-slick-curiosity-roxo.svg');
             }
         }
+
+        .box-content{
+            width: 225px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .curiosity{
+            &-content{
+                color: #fff;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 1.6rem;
+                margin-bottom: 16px;
+                text-align: center;
+
+                &_black{
+                    color: #000;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 1.6rem;
+                    margin-bottom: 16px;
+                    text-align: center;
+                }
+            }
+            &-target_slick{
+                background: #742AF9;
+                min-width: 90px;
+                height: 45px;
+                display: flex;
+                font-size: 18px;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid black;
+                color: #000;
+                border-radius: 30px;
+                font-weight: 600;
+                position: relative;
+                bottom: 0;
+                left: 0;
+
+                button{
+                    background: transparent;
+
+                    i{
+                        color: #FFFFFF;
+                    }
+                }
+                .current{
+                    font-weight: 700;
+                    font-size: 22px;
+                    color: #fff;
+                }
+                .total{
+                    color: #023901;
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+
+                &_2{
+                    background: #025318;
+                }
+                &_3{
+                    background:#001963;
+                }
+
+                &_4{
+                    background: #F0C600;
+                }
+
+                &_5{
+                    background: #02C6DE;
+                }
+            }
+        }
+    
     }
     .curiosity-nav{
         position: absolute;

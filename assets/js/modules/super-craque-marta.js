@@ -4,6 +4,7 @@
 	var containerwin = $(".win__slick")
 	var containerdetails = $(".slick__details")
 	var containerCuriosityText = $(".slick-curiosity_text")
+	var containerCuriosityImg = $(".slick-curiosity_img")
 	
 	
 	containerCuriosityText.slick({
@@ -12,7 +13,7 @@
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		arrows: false,
-		dots: true,
+		dots: false,
 		adaptiveHeight: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -27,6 +28,32 @@
 			}]
 	});
 
+	containerCuriosityImg.slick({
+		autoplay: false,
+		asNavFor: '.slick-curiosity_text',
+		autoplaySpeed: 4000,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		arrows: true,
+		dots: false,
+		prevArrow: $('.curiosity-nav').find('.slick-prev'),
+        nextArrow: $('.curiosity-nav').find('.slick-next'),
+		adaptiveHeight: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+
+						}
+			
+			}]
+	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var current = currentSlide + 1;
+		$('.slick-nav_historia').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
+);
 
 	containerwin.slick({
 		autoplay: false,
