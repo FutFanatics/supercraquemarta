@@ -2,16 +2,17 @@
     @media (min-width: 1200px) { @content; }
 }
 .c-chronology{
-    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquepele/mob-cronology.png');
     min-height: 100vh;
-    padding: 0px 0px 100px;
-    background-size: cover;
-    background-position: center;
+    padding: 0px 0px 0px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    margin-bottom: -22%;
 
-    @include md{
-        background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquepele/bg_cronology.png');
+    
+    .row-marta{
+        padding-bottom: 120px;
     }
-
     .box-chronology{
         padding: 100px 10px 0px 10px;
         align-items: center;
@@ -26,10 +27,13 @@
         }
 
         &-start{
-            padding: 0px 0px 100px 0px;
+            padding: 60px 0px 100px 0px;
         }
         &-projection{
             padding-top: 500px;
+        }
+        &-marta-mistica{
+            padding: 100px 0px 0px 0px;
         }
     }
     .chronology{
@@ -37,6 +41,7 @@
             background:url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/background-start.png') ;
             background-position:top center;
             min-height: 120vh;
+            
         }
         &-projection{
             background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/bg-middle.png');
@@ -50,31 +55,46 @@
             background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/bg-suecia.png');
             background-position:top center;
             background-size: cover;
-            top: -175px;
+            top: -180px;
             position: relative;
-            min-height: 150vh;
+            min-height: 240vh;
+        }
+        &-mistica{
+            background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/bg-mistica.png');
+            background-position:top center;
+            background-size: cover;
+            position: relative;
+            top: -300px;
+            min-height: 85vh;
+            z-index: 99;
         }
         
     }
     .chronology{
         &-img{
             width: 100%;
-            z-index: 999;
+            z-index: 6;
             position: relative;
             
             @include md{
                 width: 100%;
                 min-height: 250px;
             }
+
+            &-marta-mistica{
+                top: 2.3rem;
+                position: relative;
+            }
             
             &_text{
                 &-start{
-                    max-height: 150px;
+                    max-height: 170px;
                     margin-bottom: 36px;
                 }
                 &-projection{
                     max-height: 28px;
                 }
+                
             }
         }
         &-title{
@@ -111,6 +131,51 @@
             &-projection{
                 color: #FFF;
             }
+            &_marta-mistica{
+                color: #FFF;
+            }
+        }
+        &-icon-suecia{
+            &-light{
+                position: absolute;
+                width: 450px;
+                top:40%;
+                left:-5%;
+                z-index: 0;
+            }
+            &-dark{
+                position: absolute;
+                right: -15%;
+                width: 600px;
+                top: 25%;
+                z-index: 0;
+            }
+            &_left{
+                position: absolute;
+                left: -40%;
+                height: 750px;
+                width: auto;
+                z-index: -1;
+                top: 15%;
+            }
+            &-violet{
+                width: 100px;
+                position: absolute;
+                bottom: 8%;
+                left: 7%;
+            }
+            &-yellow{
+                width: 100px;
+                position: absolute;
+                top: -5%;
+                left: 38%;
+            }
+            &-ciano{
+                width: 300px;
+                position: absolute;
+                bottom: -5%;
+                right: 20%;
+            }
         }
     }
 
@@ -122,6 +187,7 @@
         &-projection{
             position: absolute;
         }
+        
     }
 }
 
@@ -130,8 +196,100 @@
         top:-400px;
 
         .chronology-img{
-            z-index: 1;
+            z-index: 5;
         }
     }
-}
+    &-middle-suecia{
+        background:url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/marta_suecia.png') ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 3;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        &_text{
+            width: 45%;
+            margin-left: 40%;
+
+            .text{
+                color: #FFF;
+                line-height: 1.9rem;
+                font-weight: 600;
+                font-size: 16px;                
+            }
+        }
+    }
+    
+}
+.col-suecia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px 0px 40px;
+    padding-top: 40px;
+    
+    height: 800px;
+    margin: 0px 16px;
+    
+    &_eua{
+        background-color:#F0C600;
+
+        .col-suecia-time{
+            background-color: #001E5E;
+        }
+    }
+    &_back{
+        background-color: #025318;
+
+        .col-suecia-time{
+            background-color: #ECD104;
+            color: #025318;
+        }
+    }
+    &_orlando{
+        background-color: #742AF9;
+
+        .col-suecia-time{
+            background-color: #02C6DE;
+            color: #742AF9 ;
+        }
+    }
+
+    &_box-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+
+    &-title{
+        color: #FFF;
+        font-size: 38px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &-time{
+        color: #FFF;
+        width: 130px;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+    }
+    &-content{
+        font-weight: 500;
+        color: #fff;
+        line-height: 1.8rem;
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+.row-suecia{
+    z-index: 1;
+    position: relative;
+}

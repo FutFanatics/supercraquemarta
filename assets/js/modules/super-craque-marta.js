@@ -98,7 +98,7 @@
 			}]
 	});
 
-	var produtos = [113502,114348,114386,114390,114394];
+	var produtos = [113502,114348,114386,114390,114394,122783,112568];
 
     var template_produtos =
 		'<div class="item">' +
@@ -122,7 +122,7 @@
 		var itens = $('#vitrine-fut').attr('data-products');
 
 	
-	$.getJSON('https://www.futfanatics.com.br/web_api/products?id=' + itens, '', function (data) {
+	$.getJSON('https://www.futfanatics.com.br/web_api/products?id=' + produtos, '', function (data) {
 		if (data) {
 			var variants = [];
 
