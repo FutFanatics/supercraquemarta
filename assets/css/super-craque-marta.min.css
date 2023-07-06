@@ -1050,6 +1050,10 @@ html .botao-lancamento:hover {
   src: url("fonts/sporty/SportyPro-Bold.otf") format("opentype");
 }
 /** PAGE PALMEIRAS **/
+body {
+  margin: 0px;
+}
+
 header {
   color: #040F25;
 }
