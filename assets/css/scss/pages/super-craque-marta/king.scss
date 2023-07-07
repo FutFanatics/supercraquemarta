@@ -9,10 +9,10 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
 }
 
 @mixin lg{
-    @media(min-width: 1480px) {@content;}
+    @media(min-width: 1400px) {@content;}
 }
 .c-king{
-    background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemessi/bg-listras.png');
+    background: #fff;
     padding: 80px 0px;
     overflow: hidden;
 
@@ -21,6 +21,7 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
     }
     
     .slick__king{
+        z-index: 9999999999;
         @include md{
             width: 125%;
         }

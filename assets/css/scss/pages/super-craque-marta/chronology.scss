@@ -1,6 +1,14 @@
 @mixin md{
     @media (min-width: 1200px) { @content; }
 }
+@mixin lg{
+    @media(min-width: 1400px) {@content;}
+}
+@mixin xl{
+    @media(min-width: 1590px) {@content;}
+}
+
+
 .c-chronology{
     min-height: 100vh;
     padding: 0px 0px 0px;
@@ -8,6 +16,14 @@
     overflow: hidden;
     z-index: 2;
     margin-bottom: -22%;
+
+    @include md{
+        margin-bottom: -23%;
+    }
+
+    @include lg{
+        margin-bottom: -22%;
+    }
 
     
     .row-marta{
@@ -30,7 +46,17 @@
             padding: 60px 0px 100px 0px;
         }
         &-projection{
-            padding-top: 500px;
+            padding-top: 38%;
+
+            @include md{
+                padding-top: 40%;
+            }
+
+            @include lg{
+               padding-bottom: 0; 
+               padding-top: 38%;
+            }
+            
         }
         &-marta-mistica{
             padding: 100px 0px 0px 0px;
@@ -55,18 +81,41 @@
             background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/bg-suecia.png');
             background-position:top center;
             background-size: cover;
-            top: -180px;
+            top: -25vh;
             position: relative;
-            min-height: 240vh;
+
+            @include md{
+                top: -30vh;
+                height: 325vh;
+            }
+
+            @include lg{
+                height: auto;
+            }
         }
         &-mistica{
             background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/bg-mistica.png');
             background-position:top center;
             background-size: cover;
             position: relative;
-            top: -300px;
-            min-height: 85vh;
+            top: -37vh;
+            height: 80vh;
             z-index: 99;
+
+
+            @include md{
+                top: -50vh;
+                height: 95vh;
+            }
+
+            @include lg{
+                top:-45vh;
+                height: 80vh;
+            }
+
+            @include xl{
+                height: 70vh;
+            }
         }
         
     }
@@ -79,11 +128,27 @@
             @include md{
                 width: 100%;
                 min-height: 250px;
+                
             }
 
+            &-middle{
+                height: 720px;
+                width: auto;
+                left: 58%;
+                transform: translate(-50%);
+            }
             &-marta-mistica{
-                top: 2.3rem;
+                top: 4.5rem;
                 position: relative;
+
+                @include lg{
+                    top: 3rem;
+                }
+                @include xl{
+                    top: 6.5rem;
+                }
+                
+                
             }
             
             &_text{
@@ -133,6 +198,7 @@
             }
             &_marta-mistica{
                 color: #FFF;
+                line-height: 2rem;
             }
         }
         &-icon-suecia{
@@ -175,6 +241,14 @@
                 position: absolute;
                 bottom: -5%;
                 right: 20%;
+
+                @include md{
+                    bottom: -12%;
+                }
+
+                @include lg{
+                    bottom: -5%;
+                }
             }
         }
     }
@@ -193,7 +267,7 @@
 
 .box-img{
     &-projection{
-        top:-400px;
+        top:-50vh;
 
         .chronology-img{
             z-index: 5;
@@ -234,6 +308,14 @@
     
     height: 800px;
     margin: 0px 16px;
+
+    @include md{
+        height: 900px;
+    }
+
+    @include lg{
+        height: 850px;
+    }
     
     &_eua{
         background-color:#F0C600;
@@ -268,18 +350,28 @@
 
     &-title{
         color: #FFF;
-        font-size: 38px;
+        font-size: 60px;
         text-align: center;
-        font-weight: 700;
+        line-height: 3.3rem;
+        font-family: 'forque';
+        font-weight: 500;
         text-transform: uppercase;
+
+        @include md{
+            font-size: 50px;
+        }
+        @include lg{
+            font-size: 60px;
+        }
     }
     &-time{
         color: #FFF;
         width: 130px;
-        font-size: 22px;
+        font-size: 28px;
         display: flex;
+        font-family: 'forque';
         justify-content: center;
-        font-weight: 700;
+        font-weight: 500;
     }
     &-content{
         font-weight: 500;
@@ -287,9 +379,29 @@
         line-height: 1.8rem;
         font-size: 16px;
         text-align: justify;
+
+        &_eua{
+            color: #000;
+        }
     }
 }
 .row-suecia{
     z-index: 1;
     position: relative;
+}
+
+.chronology-img_text-marta-mistica{
+    position: absolute;
+    left:45%;
+}
+
+.col-mistica_text{
+    padding: 0px 40px;
+
+    @include md{
+        padding: 0px 20px;
+    }
+    @include lg{
+        padding: 0px 40px;
+    }
 }
