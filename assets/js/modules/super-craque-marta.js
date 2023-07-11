@@ -10,6 +10,7 @@
 	containerCuriosityText.slick({
 		autoplay: false,
 		autoplaySpeed: 4000,
+		asNavFor: '.slick-curiosity_img',
 		pauseOnFocus: false,
 		pauseOnHover: false,
 		arrows: false,
@@ -52,7 +53,7 @@
 			}]
 	}).on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var current = currentSlide + 1;
-		$('.slick-nav_historia').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
+		$('.curiosity-nav').find('.slick-numbers .current').html(current < 10 ? "0" + current : current)}
 );
 
 	containerwin.slick({
@@ -229,6 +230,26 @@
 
 	vitrine.html('');
 
+	$('.see-more_eua').on('click', function() {
+		$('.col-suecia-content_eua').css({'display':'block', 'padding':'0px 32px'});
+		$('.col-suecia_eua').css({'flex-direction':'column', 'height':'600px'});
+		$('.col-suecia_box-title_eua').css({'margin-bottom':'32px'});
+		$('.col-suecia-title_eua').css({'padding-top':'40px'});
+	});
+
+	$('.see-more_back').on('click', function() {
+		$('.col-suecia-content_back').css({'display':'block', 'padding':'0px 32px'});
+		$('.col-suecia_back').css({'flex-direction':'column', 'height':'600px'});
+		$('.col-suecia_box-title_back').css({'margin-bottom':'32px'});
+		$('.col-suecia-title_back').css({'padding-top':'40px'});
+	});
+
+	$('.see-more_orlando').on('click', function() {
+		$('.col-suecia-content_orlando').css({'display':'block', 'padding':'0px 32px'});
+		$('.col-suecia_orlando').css({'flex-direction':'column', 'height':'600px'});
+		$('.col-suecia_box-title_orlando').css({'margin-bottom':'32px'});
+		$('.col-suecia-title_orlando').css({'padding-top':'40px'});
+	});
 
 	if (isMobile()) {
 		vitrine.slick({
@@ -262,25 +283,7 @@
 	}
     
 	
-
-
-
-	function copyToClipboard(element) {
-		var $temp = $("<input>");
-		$("body").append($temp);
-		$temp.val($(element).text()).select();
-		document.execCommand("copy");
-		$temp.remove();
-	}
-
-	$('.name-cupom').on('click', function() {
-		var $el = $(this)
-		copyToClipboard($el .find('.cupom'));
-		$($el).addClass('copied');
-		setTimeout(function() {
-			$($el).removeClass('copied');
-		}, 3000);
-	});
+	
 
 	$('.c-modalVote form').on('submit', function(event) {
 		console.log('clickou');

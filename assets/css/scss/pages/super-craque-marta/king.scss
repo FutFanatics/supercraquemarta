@@ -2,7 +2,8 @@
 $color-primary: #03152E;
 $color-secondary: linear-gradient(180deg, rgba(255, 255, 255, 0.13) 0%, rgba(8, 45, 66, 0) 100%);
 $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);                 
-
+$color-dotsActive:#00A022;
+$color-dots:#535353;
 
 @mixin md{
     @media (min-width: 1200px) { @content; }
@@ -14,10 +15,11 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
 .c-king{
     background: #fff;
     padding: 80px 0px;
-    overflow: hidden;
+    
 
     @include md{
         padding: 60px 0px;
+        overflow: hidden;
     }
     
     .slick__king{
@@ -49,10 +51,10 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
         }
         &-content{
             color: $color-primary;
-            font-size: 16px;
+            font-size: 18px;
             text-align: center;
             margin-bottom: 8px;
-            padding: 0px 20px;
+            padding: 40px 20px;
 
             @include md{
                 font-size: 18px;
@@ -60,6 +62,7 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
                 margin-bottom: 0;
                 padding: 0;
             }
+            
         }
         &-card{
             margin-top: 8px;
@@ -72,7 +75,15 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
             &_img{
                 &-text{
                     max-height: 350px;
+                    
+                    &_mob{
+                        top: -23%;
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
                 }
+
+                
             }
 
         }
@@ -230,7 +241,7 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
     
             button {
                 font-size: 0;
-                background: #535353 ;
+                background: $color-dots;
                 width: 20px;
                 height: 5px;
                 border-radius: 4px;
@@ -245,7 +256,7 @@ $color-third: linear-gradient(180deg, #00A022 0%, #03152E 100%);
                 button {
                     opacity: 1;
                     width: 40px;
-                    background:#347DA3;
+                    background:$color-dotsActive;
                 }
             }
         }

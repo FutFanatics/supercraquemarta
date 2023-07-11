@@ -1009,7 +1009,7 @@ html .botao-lancamento:hover {
 @font-face {
   font-family: "forque";
   font-weight: normal;
-  src: url("fonts/forque/forque.ttf") format("opentype");
+  src: url("fonts/forque/forque.ttf") format("truetype");
 }
 @font-face {
   font-family: "Gotham";
@@ -1286,11 +1286,11 @@ p {
 .c-king {
   background: #fff;
   padding: 80px 0px;
-  overflow: hidden;
 }
 @media (min-width: 1200px) {
   .c-king {
     padding: 60px 0px;
+    overflow: hidden;
   }
 }
 .c-king .slick__king {
@@ -1324,10 +1324,10 @@ p {
 }
 .c-king .king-content {
   color: #03152E;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 8px;
-  padding: 0px 20px;
+  padding: 40px 20px;
 }
 @media (min-width: 1200px) {
   .c-king .king-content {
@@ -1349,6 +1349,11 @@ p {
 }
 .c-king .king-card_img-text {
   max-height: 350px;
+}
+.c-king .king-card_img-text_mob {
+  top: -23%;
+  left: 50%;
+  transform: translate(-50%);
 }
 .c-king .slick__king {
   position: relative;
@@ -1513,7 +1518,7 @@ p {
 .c-king .slick__king .slick-dots li.slick-active button {
   opacity: 1;
   width: 40px;
-  background: #347DA3;
+  background: #00A022;
 }
 @media (min-width: 1200px) {
   .c-king .slick__king::before {
@@ -1808,7 +1813,7 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 2;
-  margin-bottom: -22%;
+  margin-bottom: -69%;
 }
 @media (min-width: 1200px) {
   .c-chronology {
@@ -1821,7 +1826,12 @@ p {
   }
 }
 .c-chronology .row-marta {
-  padding-bottom: 120px;
+  padding-bottom: 40px;
+}
+@media (min-width: 1200px) {
+  .c-chronology .row-marta {
+    padding-bottom: 120px;
+  }
 }
 .c-chronology .box-chronology {
   padding: 100px 10px 0px 10px;
@@ -1841,7 +1851,7 @@ p {
   padding: 60px 0px 100px 0px;
 }
 .c-chronology .box-chronology-projection {
-  padding-top: 38%;
+  padding-top: 60%;
 }
 @media (min-width: 1200px) {
   .c-chronology .box-chronology-projection {
@@ -1860,7 +1870,12 @@ p {
 .c-chronology .chronology-start {
   background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/background-start.png");
   background-position: top center;
-  min-height: 120vh;
+  min-height: 160vh;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-start {
+    min-height: 120vh;
+  }
 }
 .c-chronology .chronology-projection {
   background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/bg-middle.png");
@@ -1868,19 +1883,27 @@ p {
   background-size: cover;
   position: relative;
   top: -100px;
-  min-height: 125vh;
+  min-height: 140vh;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-projection {
+    min-height: 125vh;
+  }
 }
 .c-chronology .chronology-suecia {
   background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/bg-suecia.png");
   background-position: top center;
   background-size: cover;
-  top: -25vh;
+  top: -30vh;
+  padding-bottom: 60%;
   position: relative;
+  min-height: 3;
 }
 @media (min-width: 1200px) {
   .c-chronology .chronology-suecia {
     top: -30vh;
     height: 325vh;
+    padding-bottom: 0%;
   }
 }
 @media (min-width: 1400px) {
@@ -1893,25 +1916,28 @@ p {
   background-position: top center;
   background-size: cover;
   position: relative;
-  top: -37vh;
-  height: 80vh;
+  min-height: 160vh;
+  top: -330px;
   z-index: 99;
 }
 @media (min-width: 1200px) {
   .c-chronology .chronology-mistica {
     top: -50vh;
     height: 95vh;
+    min-height: 95vh;
   }
 }
 @media (min-width: 1400px) {
   .c-chronology .chronology-mistica {
     top: -45vh;
     height: 80vh;
+    min-height: 80vh;
   }
 }
 @media (min-width: 1590px) {
   .c-chronology .chronology-mistica {
     height: 70vh;
+    min-height: 7vh;
   }
 }
 .c-chronology .chronology-img {
@@ -1926,10 +1952,17 @@ p {
   }
 }
 .c-chronology .chronology-img-middle {
-  height: 720px;
+  height: 500px;
   width: auto;
-  left: 58%;
-  transform: translate(-50%);
+  left: -28%;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-img-middle {
+    transform: translate(-50%);
+    height: 720px;
+    width: auto;
+    left: 58%;
+  }
 }
 .c-chronology .chronology-img-marta-mistica {
   top: 4.5rem;
@@ -1948,6 +1981,9 @@ p {
 .c-chronology .chronology-img_text-start {
   max-height: 170px;
   margin-bottom: 36px;
+}
+.c-chronology .chronology-img_text-start_mob {
+  max-height: 435px;
 }
 .c-chronology .chronology-img_text-projection {
   max-height: 28px;
@@ -1985,15 +2021,34 @@ p {
 @media (min-width: 1200px) {
   .c-chronology .chronology-content {
     padding-top: 0px;
+    font-size: 16px;
     text-align: justify;
   }
 }
 .c-chronology .chronology-content-projection {
   color: #FFF;
+  padding: 32px 32px 0px 32px;
+  text-align: justify;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-content-projection {
+    padding: 0;
+  }
 }
 .c-chronology .chronology-content_marta-mistica {
   color: #FFF;
   line-height: 2rem;
+  text-align: justify;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-content_marta-mistica {
+    text-align: start;
+  }
+}
+.c-chronology .chronology-content-start {
+  padding: 0px 32px;
+  padding-top: 0px;
+  text-align: justify;
 }
 .c-chronology .chronology-icon-suecia-light {
   position: absolute;
@@ -2001,6 +2056,12 @@ p {
   top: 40%;
   left: -5%;
   z-index: 0;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-icon-suecia-light {
+    display: block;
+  }
 }
 .c-chronology .chronology-icon-suecia-dark {
   position: absolute;
@@ -2008,6 +2069,12 @@ p {
   width: 600px;
   top: 25%;
   z-index: 0;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-icon-suecia-dark {
+    display: block;
+  }
 }
 .c-chronology .chronology-icon-suecia_left {
   position: absolute;
@@ -2016,28 +2083,48 @@ p {
   width: auto;
   z-index: -1;
   top: 15%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-icon-suecia_left {
+    display: block;
+  }
 }
 .c-chronology .chronology-icon-suecia-violet {
   width: 100px;
   position: absolute;
   bottom: 8%;
   left: 7%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-icon-suecia-violet {
+    display: block;
+  }
 }
 .c-chronology .chronology-icon-suecia-yellow {
   width: 100px;
   position: absolute;
   top: -5%;
   left: 38%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .c-chronology .chronology-icon-suecia-yellow {
+    display: block;
+  }
 }
 .c-chronology .chronology-icon-suecia-ciano {
   width: 300px;
   position: absolute;
   bottom: -5%;
   right: 20%;
+  display: none;
 }
 @media (min-width: 1200px) {
   .c-chronology .chronology-icon-suecia-ciano {
     bottom: -12%;
+    display: block;
   }
 }
 @media (min-width: 1400px) {
@@ -2045,8 +2132,10 @@ p {
     bottom: -5%;
   }
 }
-.c-chronology .col-projection {
-  margin-right: 40px;
+@media (min-width: 1200px) {
+  .c-chronology .col-projection {
+    margin-right: 40px;
+  }
 }
 .c-chronology .col-content-projection {
   position: absolute;
@@ -2059,20 +2148,28 @@ p {
   z-index: 5;
 }
 .box-img-middle-suecia {
-  background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/marta_suecia.png");
+  background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/marta_suecia_mob.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   z-index: 3;
   width: 100%;
-  height: 500px;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1200px) {
+  .box-img-middle-suecia {
+    background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/marta_suecia.png");
+    height: 500px;
+    background-repeat: no-repeat;
+  }
+}
 .box-img-middle-suecia_text {
-  width: 45%;
-  margin-left: 40%;
+  width: 100%;
+  margin-left: 0%;
+  padding: 85px 32px 0px 32px;
 }
 .box-img-middle-suecia_text .text {
   color: #FFF;
@@ -2080,19 +2177,29 @@ p {
   font-weight: 600;
   font-size: 16px;
 }
+@media (min-width: 1200px) {
+  .box-img-middle-suecia_text {
+    width: 45%;
+    margin-left: 25%;
+    padding: 32px 32px 0px 32px;
+  }
+}
 
 .col-suecia {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 50px 40px 0px 40px;
-  padding-top: 40px;
-  height: 800px;
-  margin: 0px 16px;
+  height: 150px;
+  padding: 0;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  margin: 16px 0px;
 }
 @media (min-width: 1200px) {
   .col-suecia {
     height: 900px;
+    padding: 50px 40px 0px 40px;
+    padding-top: 40px;
+    flex-direction: column;
+    margin: 0px 16px;
   }
 }
 @media (min-width: 1400px) {
@@ -2102,6 +2209,10 @@ p {
 }
 .col-suecia_eua {
   background-color: #F0C600;
+}
+.col-suecia_eua.active {
+  height: 600px;
+  flex-direction: column;
 }
 .col-suecia_eua .col-suecia-time {
   background-color: #001E5E;
@@ -2122,15 +2233,22 @@ p {
 }
 .col-suecia_box-title {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
-  margin-bottom: 36px;
+  height: 150px;
+}
+@media (min-width: 1200px) {
+  .col-suecia_box-title {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 36px;
+  }
 }
 .col-suecia-title {
   color: #FFF;
-  font-size: 60px;
-  text-align: center;
-  line-height: 3.3rem;
+  font-size: 40px;
+  text-align: start;
+  line-height: 2rem;
   font-family: "forque";
   font-weight: 500;
   text-transform: uppercase;
@@ -2138,6 +2256,8 @@ p {
 @media (min-width: 1200px) {
   .col-suecia-title {
     font-size: 50px;
+    text-align: center;
+    line-height: 3.3rem;
   }
 }
 @media (min-width: 1400px) {
@@ -2145,14 +2265,53 @@ p {
     font-size: 60px;
   }
 }
+.col-suecia .see-more {
+  width: 50px;
+  height: 50px;
+}
+.col-suecia .icon-see-more {
+  width: 100%;
+}
+.col-suecia .box-time {
+  width: 125px;
+  display: flex;
+  height: 100%;
+  margin-right: 16px;
+}
+.col-suecia .box-time_eua {
+  background-color: #001E5E;
+}
+.col-suecia .box-time_back {
+  background-color: #ECD104;
+}
+.col-suecia .box-time_orlando {
+  background-color: #02C6DE;
+}
+@media (min-width: 1200px) {
+  .col-suecia .box-time {
+    display: none;
+  }
+}
+.col-suecia .box-time .col-suecia-time {
+  background-color: transparent;
+}
 .col-suecia-time {
   color: #FFF;
-  width: 130px;
-  font-size: 28px;
+  transform: rotate(270deg);
+  font-size: 27px;
   display: flex;
   font-family: "forque";
+  left: 60%;
+  position: relative;
   justify-content: center;
   font-weight: 500;
+}
+@media (min-width: 1200px) {
+  .col-suecia-time {
+    width: 130px;
+    left: 0;
+    transform: rotate(0deg);
+  }
 }
 .col-suecia-content {
   font-weight: 500;
@@ -2160,6 +2319,12 @@ p {
   line-height: 1.8rem;
   font-size: 16px;
   text-align: justify;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .col-suecia-content {
+    display: block;
+  }
 }
 .col-suecia-content_eua {
   color: #000;
@@ -2170,9 +2335,11 @@ p {
   position: relative;
 }
 
-.chronology-img_text-marta-mistica {
-  position: absolute;
-  left: 45%;
+@media (min-width: 1200px) {
+  .chronology-img_text-marta-mistica {
+    position: absolute;
+    left: 45%;
+  }
 }
 
 .col-mistica_text {
@@ -2189,14 +2356,18 @@ p {
   }
 }
 
+.chronology-img-text_suecia {
+  max-height: 140px;
+}
+
 .c-curiosity {
-  padding: 40px 0px;
-  max-height: 90vh;
+  max-height: 120vh;
   overflow: hidden;
 }
 @media (min-width: 1200px) {
   .c-curiosity {
     padding: 80px 0px;
+    max-height: 90vh;
   }
 }
 .c-curiosity .curiosity-box {
@@ -2221,9 +2392,15 @@ p {
 }
 .c-curiosity .curiosity-target {
   position: relative;
-  width: 53px;
+  width: 100%;
   background-color: #742AF9;
-  height: 500px;
+  height: 40px;
+}
+@media (min-width: 1200px) {
+  .c-curiosity .curiosity-target {
+    height: 500px;
+    width: 53px;
+  }
 }
 .c-curiosity .curiosity-title {
   color: #fff;
@@ -2232,14 +2409,26 @@ p {
   position: absolute;
   text-align: center;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 10px;
 }
+@media (min-width: 1200px) {
+  .c-curiosity .curiosity-title {
+    font-weight: 600;
+  }
+}
 .c-curiosity .box-text {
-  transform: rotate(270deg) translateX(-50%);
-  left: -12px;
   position: relative;
-  bottom: -60%;
+  left: 20%;
+  top: 20%;
+}
+@media (min-width: 1200px) {
+  .c-curiosity .box-text {
+    transform: rotate(270deg) translateX(-50%);
+    left: -12px;
+    position: relative;
+    bottom: -60%;
+  }
 }
 .c-curiosity .slick-curiosity_text {
   min-height: 500px;
@@ -2303,16 +2492,30 @@ p {
 }
 .c-curiosity .slick-curiosity_img {
   position: relative;
-  left: -15%;
+  top: -150px;
+}
+@media (min-width: 1200px) {
+  .c-curiosity .slick-curiosity_img {
+    left: -15%;
+    top: 0px;
+  }
 }
 .c-curiosity .slick-curiosity_img .item {
   background-repeat: no-repeat !important;
   background-size: contain !important;
-  height: 450px;
+  height: 650px;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  width: 450px !important;
+  width: 650px;
+}
+@media (min-width: 1200px) {
+  .c-curiosity .slick-curiosity_img .item {
+    width: 450px !important;
+    width: 450px !important;
+    height: 450px;
+    position: normal;
+  }
 }
 .c-curiosity .slick-curiosity_img .item_1 {
   background: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/curiosity/bg-slick-curiosity.svg");
@@ -2335,6 +2538,13 @@ p {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -20%;
+}
+@media (min-width: 1200px) {
+  .c-curiosity .slick-curiosity_img .box-content {
+    top: 0%;
+  }
 }
 .c-curiosity .slick-curiosity_img .curiosity-content {
   color: #fff;

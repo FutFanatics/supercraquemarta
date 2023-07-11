@@ -4,11 +4,12 @@
 }
 
 .c-curiosity{
-    padding: 40px 0px;
-    max-height: 90vh;
+    
+    max-height: 120vh;
     overflow: hidden;
     @include md{
         padding: 80px 0px;
+        max-height: 90vh;
     }
 
     .curiosity{
@@ -35,10 +36,15 @@
 
         &-target{
             position: relative;
-            width: 53px;
+            width: 100%;
             background-color: #742AF9;
-            height: 500px;
+            height: 40px;
 
+            @include md{
+                height: 500px;
+                width: 53px;
+
+            }
         }
 
         &-title{
@@ -48,17 +54,27 @@
             position: absolute;
             text-align: center;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 10px;
+
+            @include md{
+                font-weight: 600;
+            }
             
         }
         
     }
     .box-text{
-        transform: rotate(270deg) translateX(-50%);
-        left: -12px;
         position: relative;
-        bottom: -60%;
+        left: 20%;
+        top: 20%;
+
+        @include md{
+            transform: rotate(270deg) translateX(-50%);
+            left: -12px;
+            position: relative;
+            bottom: -60%;
+        }
     }
     .slick-curiosity_text{
         .card-curiosity-text{
@@ -125,15 +141,29 @@
     }
     .slick-curiosity_img{
         position: relative;
-        left: -15%;
+        top: -150px;
+
+        @include md{
+            left: -15%;
+            top: 0px;
+        }
         .item{        
             background-repeat: no-repeat !important;
             background-size: contain !important;
-            height: 450px;
+            height: 650px;
             display: flex !important;
             align-items: center;
             justify-content: center;
-            width: 450px !important;
+            width: 650px;
+            
+            
+
+            @include md{
+                width: 450px !important;
+                width: 450px !important;
+                height: 450px;
+                position: normal;
+            }
 
             
             &_1{
@@ -163,6 +193,12 @@
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            top: -20%;
+
+            @include md{
+                top: 0%;
+            }
         }
         .curiosity{
             &-content{

@@ -15,7 +15,7 @@
     position: relative;
     overflow: hidden;
     z-index: 2;
-    margin-bottom: -22%;
+    margin-bottom: -69%;
 
     @include md{
         margin-bottom: -23%;
@@ -27,7 +27,11 @@
 
     
     .row-marta{
-        padding-bottom: 120px;
+        padding-bottom: 40px;
+
+        @include md{
+            padding-bottom: 120px;
+        }
     }
     .box-chronology{
         padding: 100px 10px 0px 10px;
@@ -46,7 +50,7 @@
             padding: 60px 0px 100px 0px;
         }
         &-projection{
-            padding-top: 38%;
+            padding-top: 60%;
 
             @include md{
                 padding-top: 40%;
@@ -66,7 +70,11 @@
         &-start{
             background:url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/background-start.png') ;
             background-position:top center;
-            min-height: 120vh;
+             min-height: 160vh;
+
+            @include md{
+                min-height: 120vh;
+            }
             
         }
         &-projection{
@@ -75,18 +83,26 @@
             background-size: cover;
             position: relative;
             top: -100px;
-            min-height: 125vh;
+            min-height: 140vh;
+
+            @include md{
+                min-height: 125vh;
+            }
+            
         }
         &-suecia{
             background: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/bg-suecia.png');
             background-position:top center;
             background-size: cover;
-            top: -25vh;
+            top: -30vh;
+            padding-bottom: 60%;
             position: relative;
+            min-height: 3;
 
             @include md{
                 top: -30vh;
                 height: 325vh;
+                padding-bottom: 0%;
             }
 
             @include lg{
@@ -98,23 +114,26 @@
             background-position:top center;
             background-size: cover;
             position: relative;
-            top: -37vh;
-            height: 80vh;
+            min-height: 160vh;
+            top: -330px;
             z-index: 99;
 
 
             @include md{
                 top: -50vh;
                 height: 95vh;
+                min-height: 95vh;
             }
 
             @include lg{
                 top:-45vh;
                 height: 80vh;
+                min-height: 80vh;
             }
 
             @include xl{
                 height: 70vh;
+                min-height: 7vh;
             }
         }
         
@@ -132,10 +151,16 @@
             }
 
             &-middle{
-                height: 720px;
+                height: 500px;
                 width: auto;
-                left: 58%;
-                transform: translate(-50%);
+                left: -28%;  
+                
+                @include md{
+                    transform: translate(-50%);
+                    height: 720px;
+                    width: auto;
+                    left: 58%;
+                }
             }
             &-marta-mistica{
                 top: 4.5rem;
@@ -155,6 +180,10 @@
                 &-start{
                     max-height: 170px;
                     margin-bottom: 36px;
+
+                    &_mob{
+                        max-height: 435px;
+                    }
                 }
                 &-projection{
                     max-height: 28px;
@@ -191,14 +220,32 @@
 
             @include md{
                 padding-top: 0px;
+                font-size: 16px;
                 text-align: justify;
+
             }
             &-projection{
                 color: #FFF;
+                padding: 32px 32px 0px 32px;
+                text-align: justify;
+
+                @include md{
+                    padding: 0;
+                }
             }
             &_marta-mistica{
                 color: #FFF;
                 line-height: 2rem;
+                text-align: justify;
+
+                @include md{
+                    text-align: start;
+                }
+            }
+            &-start{
+                padding:0px 32px;
+                padding-top: 0px;
+                text-align: justify;
             }
         }
         &-icon-suecia{
@@ -208,6 +255,11 @@
                 top:40%;
                 left:-5%;
                 z-index: 0;
+                display: none;
+
+                @include md{
+                    display: block;
+                }
             }
             &-dark{
                 position: absolute;
@@ -215,6 +267,11 @@
                 width: 600px;
                 top: 25%;
                 z-index: 0;
+                display: none;
+
+                @include md{
+                    display: block;
+                }
             }
             &_left{
                 position: absolute;
@@ -223,27 +280,45 @@
                 width: auto;
                 z-index: -1;
                 top: 15%;
+                display: none;
+
+                @include md{
+                    display: block;
+                }
             }
             &-violet{
                 width: 100px;
                 position: absolute;
                 bottom: 8%;
                 left: 7%;
+                display: none;
+
+                @include md{
+                    display: block;
+                }
             }
             &-yellow{
                 width: 100px;
                 position: absolute;
                 top: -5%;
                 left: 38%;
+                display: none;
+
+                @include md{
+                    display: block;
+                }
+                
             }
             &-ciano{
                 width: 300px;
                 position: absolute;
                 bottom: -5%;
                 right: 20%;
+                display: none;
 
                 @include md{
                     bottom: -12%;
+                    display: block;
                 }
 
                 @include lg{
@@ -254,7 +329,10 @@
     }
 
     .col-projection{
-        margin-right: 40px;
+        @include md{
+            margin-right: 40px;
+        }
+        
     }
 
     .col-content{
@@ -274,20 +352,27 @@
         }
     }
     &-middle-suecia{
-        background:url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/marta_suecia.png') ;
+        background:url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/marta_suecia_mob.png') ;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         z-index: 3;
         width: 100%;
-        height: 500px;
+        height: 800px;
         display: flex;
         align-items: center;
         justify-content: center;
 
+        @include md{
+            background:url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/supercraquemarta/chronology/marta_suecia.png') ;
+            height: 500px;
+            background-repeat: no-repeat;
+
+        }
         &_text{
-            width: 45%;
-            margin-left: 40%;
+            width: 100%;
+            margin-left: 0%;
+            padding: 85px 32px 0px 32px;
 
             .text{
                 color: #FFF;
@@ -295,22 +380,30 @@
                 font-weight: 600;
                 font-size: 16px;                
             }
+
+            @include md{
+                width: 45%;
+                margin-left: 25%;
+                padding: 32px 32px 0px 32px;
+            }
         }
     }
     
 }
 .col-suecia{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 50px 40px 0px 40px;
-    padding-top: 40px;
-    
-    height: 800px;
-    margin: 0px 16px;
+    height:150px;
+    padding: 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    margin: 16px 0px;
 
     @include md{
         height: 900px;
+        padding: 50px 40px 0px 40px;
+        padding-top: 40px;
+        flex-direction: column;
+        margin: 0px 16px;
     }
 
     @include lg{
@@ -319,7 +412,10 @@
     
     &_eua{
         background-color:#F0C600;
-
+        &.active{
+            height:600px;
+            flex-direction: column;
+        }
         .col-suecia-time{
             background-color: #001E5E;
         }
@@ -343,35 +439,83 @@
 
     &_box-title{
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
         align-items: center;
-        margin-bottom: 36px;
+        height: 150px;
+
+        @include md{
+            height: auto;
+            flex-direction: column;
+            margin-bottom: 36px;
+        }
     }
 
     &-title{
         color: #FFF;
-        font-size: 60px;
-        text-align: center;
-        line-height: 3.3rem;
+        font-size: 40px;
+        text-align: start;
+        line-height: 2rem;
         font-family: 'forque';
         font-weight: 500;
         text-transform: uppercase;
 
         @include md{
             font-size: 50px;
+            text-align: center;
+            line-height: 3.3rem;
         }
         @include lg{
             font-size: 60px;
         }
     }
+
+    .see-more{
+        width: 50px;
+        height: 50px;
+    }
+    .icon-see-more{
+        width: 100%;
+    }
+    .box-time{
+        width: 125px;
+        display: flex;
+        height: 100%;
+        margin-right: 16px;
+        
+        &_eua{
+            background-color:#001E5E;
+        }
+        &_back{
+            background-color: #ECD104;
+        }
+        &_orlando{
+            background-color: #02C6DE;
+        }
+
+        @include md{
+            display: none;
+        }
+        .col-suecia-time{
+            background-color: transparent;
+        }
+        
+    }
+
     &-time{
         color: #FFF;
-        width: 130px;
-        font-size: 28px;
+        transform: rotate(270deg);
+        font-size: 27px;
         display: flex;
         font-family: 'forque';
+        left: 60%;
+        position: relative;
         justify-content: center;
         font-weight: 500;
+        @include md{
+            width: 130px;
+            left: 0;
+            transform: rotate(0deg);
+        }
     }
     &-content{
         font-weight: 500;
@@ -379,6 +523,11 @@
         line-height: 1.8rem;
         font-size: 16px;
         text-align: justify;
+        display: none;
+
+        @include md{
+            display: block;
+        }
 
         &_eua{
             color: #000;
@@ -391,8 +540,10 @@
 }
 
 .chronology-img_text-marta-mistica{
-    position: absolute;
-    left:45%;
+    @include md{
+      position: absolute;
+        left:45%;  
+    }    
 }
 
 .col-mistica_text{
@@ -404,4 +555,7 @@
     @include lg{
         padding: 0px 40px;
     }
+}
+.chronology-img-text_suecia{
+    max-height: 140px;
 }
